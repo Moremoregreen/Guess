@@ -9,7 +9,7 @@ import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-    val TAG = "MainActivity"
+    val TAG = MainActivity::class.java.simpleName
     val secretNumber = SecretNumber()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,16 +22,16 @@ class MainActivity : AppCompatActivity() {
         val guess = ed_number.text.toString().toInt()
         Log.d(TAG, "number:${guess}")
         val diff = secretNumber.validate(guess)
-        var message = "Bingo! Lucky Number is ${secretNumber.secret}!"
+        var message = getString(R.string.bingo)
         when {
-            diff < 0 -> message = "Bigger"
-            diff > 0 -> message = "Smaller"
+            diff < 0 -> message = getString(R.string.bigger)
+            diff > 0 -> message = getString(R.string.smaller)
         }
 //        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
         AlertDialog.Builder(this)
-            .setTitle("Message")
+            .setTitle(getString(R.string.dialog_title))
             .setMessage(message)
-            .setPositiveButton("OK", null)
+            .setPositiveButton(getString(R.string.ok), null)
             .show()
     }
 }

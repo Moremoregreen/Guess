@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">Guess</string>
-    <string name="ok">確定</string>
+    <string name="please_enter_number">Please Enter Number(1-10)!</string>
+    <string name="ok">OK</string>
+    <string name="bingo">Bingo!</string>
+    <string name="bigger">Bigger</string>
+    <string name="smaller">Smaller</string>
+    <string name="dialog_title">Message</string>
+    <string name="title_activity_material">MaterialActivity</string>
+    <string name="godlike">Excellent! The number is</string>
+    <string name="replay">Replay Game</string>
+    <string name="are_you_sure">Are you sure?</string>
+    <string name="cancel">Cancel</string>
 </resources>
